@@ -1,0 +1,32 @@
+
+face_recognition:
+  cpu_shares: 100
+  mem_limit: 262144000
+  image: quantumsnipe/face-recognition-api:backend
+  restart: always
+  links:
+    - mongo
+  environment:
+    - DATABASE_URI=mongodb://admin:password@mongo:27017
+    - FACE_TOLERANCE=0.6
+  ports:
+    - "5000:5000"
+mongo:
+  cpu_shares: 100
+  mem_limit: 262144000
+  image: mongo
+  restart: always
+  ports:
+    - "27017:27017"
+  environment:
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=password
+schedule:
+  cpu_shares: 100
+  mem_limit: 262144000
+  image: quantumsnipe/face-recognition-api:reset
+  restart: always
+  links:
+    - mongo
+  environment:
+    - DATABASE_URI=mongodb://admin:password@mongo:27017

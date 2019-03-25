@@ -1,33 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  background-color: #666666;
+  font-family: 'Montserrat', sans-serif;
+}
 .App {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: #262626;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+#photo {
+  height: auto;
+  width: 90vw;
+  max-width: 900px;
+  box-shadow: 1px 5px 10px rgba(0,0,0, 0.4);
+  margin-top: 5vw;
+}
+
+#camera-display {
+  position: fixed;
+  top: 0;
+  right: 0vw;
+  height: auto;
+  width: 30vw;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px rgba(0,0,0, 0.6);
+  opacity: 1;
+}
+
+.button {
+  position: fixed;
+  left: 0vw;
+  top: 0;
+  width: 15vw;
+  height: 15vw;
+  margin: 1vw;
+  border: none;
+  outline: none;
+  box-shadow: 1px 5px 10px rgba(0,0,0, 0.2);
+  border-radius: 50vw;
+  padding: 10px;
+  background-color: #b3b3b3;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 200ms linear;
+}
+.button:hover {
+  background-color: #18b125;
+  transition: background-color 200ms linear;
+}
+
+.title {
+  margin: 2px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 5vw;
+}
+
+#users {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  left: 27vw;
+  top: 4.5vw;
+  font-size: 4vw;
+  text-shadow: 0px 3px 5px rgba(0,0,0, 0.9);
+  color: #ffffff;
+}
+
+#title {
+  font-size: 5vw;
+}
+#subtitle {
+  font-size: 3vw;
+}
+
+#description {
+  font-size: 3vw;
+  text-align: justified;
+  color: #ffffff;
+  margin: 0 12vw;
+}
+
+#description ul {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+
+#description li {
+  margin: 5px 6vw;;
+}
+
+.options-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #ffffff;
+  background-color: black;
+  width: 100%;
+  font-size: 3vw;
+}
+
+.options-bar input {
+  width: 50%;
+  height: auto;
+  border: none;
+  outline: none;
+  font-size: 3vw;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 20px;
+  padding: 0;
+}
+
+.options-bar button {
+  margin-left: -7%;
+  padding: 0;
+  width: 30%;
+  background-color: #8c8c8c;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-size: 3vw;
+  font-weight: bold;
+  transition: background-color 200ms linear;
+}
+
+.options-bar button:hover {
+  background-color: #18b125;
+  transition: background-color 200ms linear;
+}
+
+.fa-camera {
+  font-size: 7vw;
+}
+
+#delete-db {
+  outline: none;
+  border: none;
+  background-color: #8c8c8c;
+  color: #ffffff;
+  width: 100%;
+  transition: background-color 200ms linear;
+  font-size: 3vw;
+}
+
+#delete-db:hover {
+  background-color: #e00d0d;
+  transition: background-color 200ms linear;
+}
+
+.text-small {
+  font-size: 2.5vw;
+}
+
+#bulk {
+  color: #ffffff;
+  background-color: black;
+  width: 100%;
+  font-size:3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#bulk label, input{
+  padding: 5px 5px;
+  outline: none;
+  overflow: hidden;
+  border: none;
+
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#bulk input:hover {
+  color: #18b125;
+  transition: all 200ms linear;
 }

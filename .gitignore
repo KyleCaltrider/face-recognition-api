@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+/.vscode
+/dlib
 /node_modules
+/face-recognition
 /.pnp
 .pnp.js
 
@@ -17,6 +20,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+/server/env.cfg
+/server/__pycache__
 
 npm-debug.log*
 yarn-debug.log*
